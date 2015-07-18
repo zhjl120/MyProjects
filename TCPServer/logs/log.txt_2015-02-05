@@ -1,0 +1,41 @@
+[2015-02-05 10:20:55.861] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:20:56.868] [INFO] Log - Mongoose disconnected
+[2015-02-05 10:20:56.869] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-05 10:27:13.772] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:27:14.775] [INFO] Log - Mongoose disconnected
+[2015-02-05 10:27:14.776] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-05 10:36:46.143] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:36:47.144] [INFO] Log - Mongoose disconnected
+[2015-02-05 10:36:47.145] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-05 10:41:27.616] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:41:27.632] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 10:42:35.755] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:42:35.771] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 10:43:00.145] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:43:00.152] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 10:45:00.569] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:45:00.586] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 10:45:33.425] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:45:33.442] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 10:46:18.601] [INFO] Log - Server is listening on 6868
+[2015-02-05 10:46:18.618] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 11:06:02.558] [INFO] Log - Server is listening on 6868
+[2015-02-05 11:06:02.574] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:16:33.435] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:16:33.450] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:22:02.088] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:22:02.101] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:27:26.003] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:27:26.018] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:28:09.618] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:28:09.634] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:57:28.540] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:58:46.775] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 14:58:48.646] [INFO] Log - Server is listening on 6868
+[2015-02-05 14:59:52.697] [INFO] Log - Server is listening on 6868
+[2015-02-05 15:12:13.897] [INFO] Log - Server is listening on 6868
+[2015-02-05 15:12:13.911] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 15:17:44.014] [INFO] Log - Server is listening on 6868
+[2015-02-05 16:07:41.153] [INFO] Log - Server is listening on 6868
+[2015-02-05 16:08:13.377] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-05 16:08:15.266] [INFO] Log - Server is listening on 6868

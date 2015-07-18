@@ -1,0 +1,20 @@
+[2015-02-02 19:05:50.803] [INFO] Log - Server is listening on 6868
+[2015-02-02 19:05:57.638] [DEBUG] Log - New connection ---> 127.0.0.1:24511
+[2015-02-02 19:06:30.474] [INFO] Log - Server is listening on 6868
+[2015-02-02 19:06:33.186] [DEBUG] Log - New connection ---> 127.0.0.1:24520
+[2015-02-02 19:07:02.118] [INFO] Log - Server is listening on 6868
+[2015-02-02 19:07:03.868] [DEBUG] Log - New connection ---> 127.0.0.1:24525
+[2015-02-02 19:07:11.693] [INFO] Log - Server is listening on 6868
+[2015-02-02 19:07:22.039] [DEBUG] Log - New connection ---> 127.0.0.1:24530
+[2015-02-02 19:11:18.682] [TRACE] Log - Request already handled !
+[2015-02-02 19:11:18.683] [ERROR] Log - { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+Error: read ECONNRESET
+    at errnoException (net.js:904:11)
+    at TCP.onread (net.js:558:19)
+[2015-02-02 19:11:18.690] [DEBUG] Log - New connection ---> 127.0.0.1:24533
+[2015-02-02 19:11:18.691] [DEBUG] Log - Socket is closed
+[2015-02-02 19:11:19.464] [INFO] Log - Server is listening on 6868
+[2015-02-02 19:11:23.623] [DEBUG] Log - New connection ---> 127.0.0.1:24542
+[2015-02-02 19:11:43.916] [INFO] Log - Recv logon request from 12-34-56-78-90
+[2015-02-02 19:12:15.023] [WARN] Log - Cannot parse json string : JSON111     {"type":"request","cmd":"log on","parameters":{"id":"12-34-56-78-90","recently request":"2013/11/3 16:35:39"}}
+

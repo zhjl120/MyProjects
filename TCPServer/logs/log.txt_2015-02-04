@@ -1,0 +1,96 @@
+[2015-02-04 14:35:56.563] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:36:37.878] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:37:21.189] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:38:14.779] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:38:21.242] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:38:28.516] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:40:18.390] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:41:19.001] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:43:12.027] [INFO] Log - Server is listening on 6868
+[2015-02-04 14:43:12.047] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 14:43:31.915] [INFO] Log - Mongoose disconnected
+[2015-02-04 14:43:33.924] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-04 14:43:35.933] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-04 14:43:37.944] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-04 14:43:39.958] [ERROR] Log - Mongoose connection error: Error: failed to connect to [localhost:27017]
+[2015-02-04 14:43:41.976] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:37:16.847] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:37:16.848] [DEBUG] Log - /******************** Test Code Start*****************/
+[2015-02-04 16:37:16.853] [DEBUG] Log - /******************** Test Code End*****************/
+[2015-02-04 16:37:16.865] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:43:11.835] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:43:11.836] [DEBUG] Log - /******************** Test Code Start*****************/
+[2015-02-04 16:43:11.840] [DEBUG] Log - /******************** Test Code End*****************/
+[2015-02-04 16:43:11.853] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:44:00.799] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:44:00.800] [DEBUG] Log - /******************** Test Code Start*****************/
+[2015-02-04 16:44:00.807] [DEBUG] Log - /******************** Test Code End*****************/
+[2015-02-04 16:44:00.822] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:44:27.461] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:44:27.461] [DEBUG] Log - /******************** Test Code Start*****************/
+[2015-02-04 16:44:27.466] [DEBUG] Log - /******************** Test Code End*****************/
+[2015-02-04 16:44:27.477] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:46:59.041] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:46:59.042] [DEBUG] Log - /******************** Test Code Start*****************/
+[2015-02-04 16:46:59.048] [DEBUG] Log - /******************** Test Code End*****************/
+[2015-02-04 16:46:59.060] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:47:54.386] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:47:54.404] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:48:53.958] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:48:53.976] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:50:00.169] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:50:00.187] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:51:32.129] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:51:32.148] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:52:23.626] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:52:23.646] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:53:05.312] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:53:05.338] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:53:22.116] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:53:22.140] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:54:59.247] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:54:59.265] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:55:18.268] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:55:52.460] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:56:29.049] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:56:29.068] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:57:40.853] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:57:40.875] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 16:58:58.131] [INFO] Log - Server is listening on 6868
+[2015-02-04 16:58:58.150] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 17:00:11.369] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:00:11.387] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 17:00:54.855] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:00:54.876] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 17:01:53.153] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:01:53.173] [INFO] Log - Mongoose connected to mongodb://localhost:27017/cas
+[2015-02-04 17:09:51.692] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:09:51.713] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:29:23.685] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:29:23.703] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:29:52.815] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:29:52.834] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:30:21.708] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:30:21.725] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:30:50.412] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:30:50.429] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:31:03.388] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:31:03.408] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:31:12.985] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:31:12.994] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:31:20.678] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:31:20.697] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:33:38.619] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:33:38.637] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:34:01.278] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:34:01.299] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 17:34:37.918] [INFO] Log - Server is listening on 6868
+[2015-02-04 17:34:37.937] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 18:58:21.407] [INFO] Log - Server is listening on 6868
+[2015-02-04 18:58:21.427] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 19:08:14.320] [INFO] Log - Server is listening on 6868
+[2015-02-04 19:08:14.339] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 19:09:05.128] [INFO] Log - Server is listening on 6868
+[2015-02-04 19:09:16.249] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
+[2015-02-04 19:13:04.414] [INFO] Log - Server is listening on 6868
+[2015-02-04 19:13:04.432] [INFO] Log - Mongoose connected to mongodb://localhost:27017/mianyang
