@@ -2,32 +2,24 @@
 
 #include "C_NetCommandDecomposer.h"
 #include "C_NetCommandComposer.h"
+#include "C_DBOperate.h"
+#include "Poco/Net/StreamSocket.h"
 
-class C_DBService;
 class C_NetCommand
 {
 public:
-	C_NetCommand(LPCTSTR pszCmdName);
+	C_NetCommand();
 	virtual ~C_NetCommand(void);
 
 public:
-	BOOL HandleRequest(LPCTSTR pCmdStream, C_DBService& DBService);
-	BOOL HandleResponse( C_NetCommand* pRequestCmd, C_DBService& DBService);
-
-public:
-	LPCTSTR GetCmdStream();
-	LPCTSTR GetResult();
-
+	virtual BOOL HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac);
 	void Release();
 
 protected:
 	C_NetCommandDecomposer m_NetCmdDecomposer;
 	C_NetCommandComposer m_NetCmdComposer;
 
-	tstring m_szCmdStream;
-	tstring m_szResult;
-
 	tstring m_szCmdName;
 	tstring m_szCmdType;
+	tstring m_szResult;
 };
-

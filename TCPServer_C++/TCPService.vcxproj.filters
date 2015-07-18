@@ -60,22 +60,43 @@
     <ClCompile Include="C_NetCmdLogOn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C_NetCmdLogOnResponse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C_NetCmdLogOff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C_NetCmdFetchChannels.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C_NetCmdFetchChannelsResponse.cpp">
+    <ClCompile Include="C_DBOperate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C_NetCmdFetchChannelContent.cpp">
+    <ClCompile Include="C_ClientMac2Socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C_NetCmdFetchChannelContentResponse.cpp">
+    <ClCompile Include="C_NetCmdRecvScreenshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdCaptureScreenshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdShutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ErrorLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdStatistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdFetchContent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_AreaEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdContentEmbed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetCmdCancelEmbed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -125,22 +146,46 @@
     <ClInclude Include="C_NetCmdLogOn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C_NetCmdLogOnResponse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C_NetCmdLogOff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C_NetCmdFetchChannels.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C_NetCmdFetchChannelsResponse.h">
+    <ClInclude Include="C_DBOperate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C_NetCmdFetchChannelContent.h">
+    <ClInclude Include="DBDataModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C_NetCmdFetchChannelContentResponse.h">
+    <ClInclude Include="C_ClientMac2Socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdRecvScreenshot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdCaptureScreenshot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdShutdown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ErrorLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdStatistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdFetchContent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_AreaEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdContentEmbed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetCmdCancelEmbed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

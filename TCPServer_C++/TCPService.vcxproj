@@ -26,7 +26,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -46,21 +46,23 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Exe\$(Configuration)\</OutDir>
+    <IntDir>..\..\Obj\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\interface;..\..\..\Plugin\interface;..\..\..\Plugin\include;..\..\..\POCO\Foundation\include;..\..\..\POCO\XML\include;..\..\..\POCO\Util\include;..\..\..\POCO\Net\include;..\..\..\JSON\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;POCO_NO_UNWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\include;..\..\..\Plugin\interface;..\..\..\Plugin\include;..\..\..\POCO\Foundation\include;..\..\..\POCO\XML\include;..\..\..\POCO\Util\include;..\..\..\POCO\Net\include;..\..\..\JSON\include;..\..\..\POCO\Data\MySQL\include;..\..\..\POCO\Data\include;..\..\..\MessagePack\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>.\TCPService.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\POCO\lib;..\..\..\JSON\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LibJSOND.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Lib;..\..\..\POCO\lib;..\..\..\JSON\lib;..\..\..\MySQL\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LibJSOND.lib;mysqlclientd.lib;LibHelperD.lib;PocoFoundationmtd.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -80,6 +82,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\interface;..\..\include;..\..\..\Plugin\interface;..\..\..\Plugin\include;..\..\..\POCO\Foundation\include;..\..\..\POCO\XML\include;..\..\..\POCO\Util\include;..\..\..\POCO\Net\include;..\..\..\JSON\include;..\..\..\POCO\Data\MySQL\include;..\..\..\POCO\Data\include;..\..\..\MessagePack\interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -87,6 +90,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>.\TCPService.def</ModuleDefinitionFile>
+      <AdditionalDependencies>LibJSON.lib;mysqlclient.lib;LibHelper.lib;PocoFoundationmt.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Lib;..\..\..\POCO\lib;..\..\..\JSON\lib;..\..\..\MySQL\lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -104,14 +109,21 @@
     <None Include="TCPService.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C_AreaEvent.cpp" />
+    <ClCompile Include="C_ClientMac2Socket.cpp" />
+    <ClCompile Include="C_DBOperate.cpp" />
     <ClCompile Include="C_DBService.cpp" />
-    <ClCompile Include="C_NetCmdFetchChannelContent.cpp" />
-    <ClCompile Include="C_NetCmdFetchChannelContentResponse.cpp" />
+    <ClCompile Include="C_ErrorLog.cpp" />
+    <ClCompile Include="C_NetCmdCancelEmbed.cpp" />
+    <ClCompile Include="C_NetCmdCaptureScreenshot.cpp" />
+    <ClCompile Include="C_NetCmdContentEmbed.cpp" />
+    <ClCompile Include="C_NetCmdFetchContent.cpp" />
     <ClCompile Include="C_NetCmdFetchChannels.cpp" />
-    <ClCompile Include="C_NetCmdFetchChannelsResponse.cpp" />
     <ClCompile Include="C_NetCmdLogOff.cpp" />
     <ClCompile Include="C_NetCmdLogOn.cpp" />
-    <ClCompile Include="C_NetCmdLogOnResponse.cpp" />
+    <ClCompile Include="C_NetCmdRecvScreenshot.cpp" />
+    <ClCompile Include="C_NetCmdShutdown.cpp" />
+    <ClCompile Include="C_NetCmdStatistics.cpp" />
     <ClCompile Include="C_NetCommand.cpp" />
     <ClCompile Include="C_NetCommandComposer.cpp" />
     <ClCompile Include="C_NetCommander.cpp" />
@@ -128,14 +140,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Interface\TCPService\I_PbTCPService.h" />
+    <ClInclude Include="C_AreaEvent.h" />
+    <ClInclude Include="C_ClientMac2Socket.h" />
+    <ClInclude Include="C_ErrorLog.h" />
+    <ClInclude Include="C_NetCmdCancelEmbed.h" />
+    <ClInclude Include="C_NetCmdCaptureScreenshot.h" />
+    <ClInclude Include="C_NetCmdContentEmbed.h" />
+    <ClInclude Include="C_NetCmdRecvScreenshot.h" />
+    <ClInclude Include="C_NetCmdShutdown.h" />
+    <ClInclude Include="C_NetCmdStatistics.h" />
+    <ClInclude Include="DBDataModel.h" />
+    <ClInclude Include="C_DBOperate.h" />
     <ClInclude Include="C_DBService.h" />
-    <ClInclude Include="C_NetCmdFetchChannelContent.h" />
-    <ClInclude Include="C_NetCmdFetchChannelContentResponse.h" />
+    <ClInclude Include="C_NetCmdFetchContent.h" />
     <ClInclude Include="C_NetCmdFetchChannels.h" />
-    <ClInclude Include="C_NetCmdFetchChannelsResponse.h" />
     <ClInclude Include="C_NetCmdLogOff.h" />
     <ClInclude Include="C_NetCmdLogOn.h" />
-    <ClInclude Include="C_NetCmdLogOnResponse.h" />
     <ClInclude Include="C_NetCommand.h" />
     <ClInclude Include="C_NetCommandComposer.h" />
     <ClInclude Include="C_NetCommander.h" />

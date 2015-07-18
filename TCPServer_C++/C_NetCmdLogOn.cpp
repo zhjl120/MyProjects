@@ -1,47 +1,77 @@
 #include "StdAfx.h"
 #include "C_NetCmdLogOn.h"
+#include "C_ClientMac2Socket.h"
+#include "C_NetCmdStatistics.h"
 
-C_NetCmdLogOn::C_NetCmdLogOn(LPCTSTR pszCmdName):
-C_NetCommand(pszCmdName)
+C_NetCmdLogOn::C_NetCmdLogOn(): m_bUpdateStartImage(TRUE)
 {
-	m_szCmdType =_T("request");
+	m_szCmdName = _T("log on");
 }
 
 C_NetCmdLogOn::~C_NetCmdLogOn(void)
 {
 }
 
-BOOL C_NetCmdLogOn::HandleRequest(LPCTSTR pszCmdStream, C_DBService& DBService)
+BOOL C_NetCmdLogOn::HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac )
 {
-	m_NetCmdDecomposer.Decompose(pszCmdStream);
+	if(! m_NetCmdDecomposer.Decompose(pszCmdStream) )
+		return FALSE;
 
-/*	LPCTSTR pszID = m_NetCmdDecomposer.GetCmdPara(_T("id"));
-	//check if the ID of device is registered
-	if(false)
+	if (DBOperate.IsRegistered(pszMac) && DBOperate.LogOn(pszMac))
 	{
-		m_szResult = _T("fail");
+		m_szResult = _T("success");
+
+		tstring szRecentlyReq = m_NetCmdDecomposer.GetCmdPara(_T("recently request"));
+		tstring szVersion = m_NetCmdDecomposer.GetCmdPara(_T("version"));
+
+		m_bUpdateStartImage = DBOperate.IsUpdateStartupImage(pszMac, szRecentlyReq.c_str());
+		m_bUpdateVersion = DBOperate.IsUpdateVersion(szVersion.c_str());
+
+		C_ClientMac2Socket::GetInstance()->AddClient(pszMac, &sktClient); 
+		C_NetLoginStatistics::UpdateMaxOnline(DBOperate);
+		C_NetLoginStatistics::UpdateTotalOnline(DBOperate);
+
+		HandleResponse(sktClient, DBOperate, pszMac);
+		return TRUE;
 	}
 	else
 	{
-		LPCTSTR pszRecentlyReq = m_NetCmdDecomposer.GetCmdPara(_T("recently request"));
-		//check recently request time
-		if (false)
-		{
-			m_szResult = _T("noupdate");
-		}
-		else
-		{
-			m_szResult = _T("success");
-		}
+		m_szResult =_T("fail");
+		HandleResponse(sktClient, DBOperate, pszMac);
+		return FALSE;
 	}
-*/
-	return TRUE;
 }
 
-LPCTSTR C_NetCmdLogOn::GetID()
+BOOL C_NetCmdLogOn:: HandleResponse(Poco::Net::StreamSocket& sktClient, C_DBOperate& DBOperate, LPCTSTR pszMac)
 {
-	LPCTSTR pszID;
-	m_NetCmdDecomposer.GetCmdPara(_T("id"), pszID);
+	m_NetCmdComposer.SetCmdName(m_szCmdName.c_str());
+	m_NetCmdComposer.SetCmdType(_T("response"));
 
-	return pszID;
+	LogOnInfo logOnInfo;
+
+	if (m_szResult.compare(_T("success")) == 0)
+	{
+		m_NetCmdComposer.SetResult( _T("success"));
+
+		logOnInfo.m_szUIid = DBOperate.GetUIid();
+
+		if(m_bUpdateStartImage)
+			logOnInfo.m_szImagePath =  DBOperate.GetStartupImage();
+		else
+			logOnInfo.m_szImagePath = _T("");//NoUpdate 
+
+		if(m_bUpdateVersion)
+			logOnInfo.m_szVersionLink = DBOperate.GetVersionLink();
+		else
+			logOnInfo.m_szVersionLink = _T("");
+	}
+	else if (m_szResult.compare(_T("fail")) == 0)
+		m_NetCmdComposer.SetResult( _T("fail"));
+
+	m_NetCmdComposer.AddContent(logOnInfo);
+	tstring szResponseCmd = m_NetCmdComposer.Compose();
+
+	sktClient.sendBytes(szResponseCmd.c_str(), strlen(szResponseCmd.c_str()));
+
+	return TRUE;
 }

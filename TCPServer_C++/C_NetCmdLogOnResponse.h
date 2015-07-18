@@ -9,6 +9,6 @@ public:
 	virtual ~C_NetCmdLogOnResponse(void);
 
 public:
-	BOOL HandleResponse(C_NetCommand* pRequestCmd, C_DBService& DBService);
+	BOOL HandleResponse(C_NetCommand* pRequestCmd, C_DBOperate& DBOperate);
 };
 

@@ -5,10 +5,10 @@
 class C_NetCmdLogOff : public C_NetCommand
 {
 public:
-	C_NetCmdLogOff(LPCTSTR pszCmdName);
+	C_NetCmdLogOff();
 	virtual ~C_NetCmdLogOff(void);
 
 public:
-	BOOL HandleRequest(LPCTSTR pszCmdStream, C_DBService& DBService);
+	virtual BOOL HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac);
 };
 

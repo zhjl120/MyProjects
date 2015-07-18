@@ -5,13 +5,17 @@
 class C_NetCmdLogOn : public C_NetCommand
 {
 public:
-	C_NetCmdLogOn(LPCTSTR pszCmdName);
+	C_NetCmdLogOn();
 	virtual ~C_NetCmdLogOn(void);
 
 public:
-	BOOL HandleRequest(LPCTSTR pszCmdStream, C_DBService& DBService);
+	virtual BOOL HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac);
+	
+private:
+	BOOL HandleResponse(Poco::Net::StreamSocket& sktClient, C_DBOperate& DBOperate, LPCTSTR pszMac);
 
-public:
-	LPCTSTR GetID();
+private:
+	BOOL m_bUpdateStartImage;
+	BOOL m_bUpdateVersion;
 };
 

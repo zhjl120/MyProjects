@@ -1,5 +1,7 @@
 #pragma once
 
+#define  POCO_NO_UNWINDOWS 
+
 #include "PluginClient\T_BundleTemplate.h"
 #include "C_PbTCPService.h"
 

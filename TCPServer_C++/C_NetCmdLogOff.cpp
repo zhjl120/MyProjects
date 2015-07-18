@@ -1,22 +1,24 @@
 #include "StdAfx.h"
 #include "C_NetCmdLogOff.h"
+#include "C_ClientMac2Socket.h"
+#include "C_NetCmdStatistics.h"
 
-C_NetCmdLogOff::C_NetCmdLogOff(LPCTSTR pszCmdName):
-C_NetCommand(pszCmdName)
+
+C_NetCmdLogOff::C_NetCmdLogOff()
 {
-	m_szCmdType =_T("request");
+	m_szCmdName = _T("log off");
 }
-
 
 C_NetCmdLogOff::~C_NetCmdLogOff(void)
 {
 }
 
-BOOL C_NetCmdLogOff::HandleRequest(LPCTSTR pszCmdStream, C_DBService& DBService)
+BOOL C_NetCmdLogOff::HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac )
 {
-	m_NetCmdDecomposer.Decompose(pszCmdStream);
+	if(! DBOperate.LogOff(pszMac))
+		return FALSE;
 
-	//change device online status to 0
-
+	C_NetLoginStatistics::UpdateOnlineTime(DBOperate,pszMac);
+	C_ClientMac2Socket::GetInstance()->RemoveClient(pszMac);
 	return TRUE;
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "json.h"
+
 class C_NetCommandDecomposer
 {
 public:
@@ -7,13 +9,17 @@ public:
 	virtual ~C_NetCommandDecomposer(void);
 
 public:
-	void Decompose(LPCTSTR pszCmd);
+	BOOL Decompose(LPCTSTR pszCmd);
 
-	LPCTSTR GetCmdName();
-	LPCTSTR GetCmdType();
+	tstring GetCmdName();
+	tstring GetCmdType();
+	tstring GetCmdPara(string szParaName);
 
-	LPCTSTR GetCmdPara(LPCTSTR pszParaName, LPCTSTR& pszParaValue);
+	int GetArraySize(LPCTSTR pszKey);
+	tstring GetValueByIndex(LPCTSTR pszKey, int nIndex);
 
-	void Reset();
+private:
+	Json::Value m_JsonRoot;
+	DWORD  m_dwMessageType;
 };
 

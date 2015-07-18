@@ -1,9 +1,7 @@
 #include "StdAfx.h"
 #include "C_NetCommand.h"
 
-C_NetCommand::C_NetCommand(LPCTSTR pszCmdName):
-m_szCmdName(pszCmdName),
-m_szCmdType(_T(""))
+C_NetCommand::C_NetCommand():m_szCmdName(_T("")),m_szCmdType(_T("")),m_szResult(_T(""))
 {
 }
 
@@ -11,24 +9,9 @@ C_NetCommand::~C_NetCommand(void)
 {
 }
 
-BOOL C_NetCommand::HandleRequest(LPCTSTR pCmdStream, C_DBService& DBService)
+BOOL C_NetCommand::HandleRequest(Poco::Net::StreamSocket& sktClient, LPCTSTR pszCmdStream, C_DBOperate& DBOperate, LPCTSTR pszMac )
 {
 	return FALSE;
-}
-
-BOOL C_NetCommand::HandleResponse(C_NetCommand* pRequestCmd, C_DBService& DBService)
-{
-	return FALSE;
-}
-
-LPCTSTR C_NetCommand::GetCmdStream()
-{
-	return m_szCmdStream.c_str();
-}
-
-LPCTSTR C_NetCommand::GetResult()
-{
-	return m_szResult.c_str();
 }
 
 void C_NetCommand::Release()
