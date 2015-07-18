@@ -1,1 +1,0 @@
-功能：读取人物属性，使用ReadProcessMemory()
